@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=`, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <title>Abako</title>
+  </head>
+  <style>
+
+  </style>
+  <body>
+    <header class="py-1 bg-dark text-light d-flex">
+      <div
+        style="width: 90% !important"
+        class="d-flex justify-content-between mx-auto"
+      >
+        <div>
+          <div>
+            <p class="h5">Abako</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div><i class="bx bxs-user">Makke Peippaaja</i></div>
+          <div>
+            <i class="bx bxs-bell">10</i>
+          </div>
+          <div><i class="bx bxs-folder-open"></i></div>
+          <div><i class="bx bx-search"></i></div>
+        </div>
+      </div>
+    </header>
+    <!-- CONTAINER -->
+    <div class="d-flex mx-auto" style="width: 90% !important">
+      <div>
+        <div class="d-flex px-3 py-2 border" style="background-color: #f5f5f5">
+          <a class="text-dark" href="#">Etusivu</a>
+        <i class="fas fa-angle-right"></i>
+
+          <a class="text-dark" href="#">Kirjasto</a>
+        <i class="fas fa-angle-right"></i>
+          <a class="text-dark" href="#"
+            ><strong>Turvallisuusohjeet 2020</strong></a
+          >
+        </div>
+        <div class="p-2 h2 border" style="background-color: #f5f5f5">
+          <i class="bx bxs-book"> Turvallisuusohjeet 2020</i>
+        </div>
+        <div class="d-flex mt-4">
+          <div class="me-4">
+            <ul class="list-group">
+              <li class="list-group-item" id="common-click-list">
+                <a
+                  id="common-click"
+                  style="color: black"
+                  href="#common"
+                  onclick="commonClick(this,'#2d343c','white', 'Yleistä','https://images.unsplash.com/photo-1596931926094-4a2439f80a78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60' )"
+                  >Yleistä</a
+                >
+              </li>
+              <li class="list-group-item" id="danger-list">
+                <a
+                  id="danger-click"
+                  style="color: black"
+                  href="#danger"
+                  onclick="dangerClick(this,'#2d343c','white', 'Vaaratilanteet',  'https://images.unsplash.com/photo-1665922907499-9918475de9ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80' )"
+                  >Vaaratilanteet</a
+                >
+              </li>
+              <li
+                class="list-group-item"
+                id="fire-list"
+                style="background-color: #2d343c"
+              >
+                <a
+                  id="fire-click"
+                  href="#fire"
+                  style="color: white"
+                  onclick="fireClick(this,'#2d343c','white', 'Tulipalot', 'https://images.unsplash.com/photo-1434139240289-56c519f77cb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')"
+                  >Tulipalot</a
+                >
+              </li>
+              <li class="list-group-item" id="incident-list">
+                <a
+                  id="incident-click"
+                  style="color: black"
+                  href="#incident"
+                  onclick="incidentClick(this,'#2d343c','white', 'Autokolarit', 'https://images.unsplash.com/photo-1471476982590-a2e02d8544dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60')"
+                  >Autokolarit</a
+                >
+              </li>
+       
+              <li class="list-group-item" id="personal-list">
+                <a
+                  id="personal-click"
+                  style="color: black"
+                  href="#personal-injury"
+                  onclick="personalClick(this,'#2d343c','white', 'Henkilövahingot', 'https://images.unsplash.com/photo-1532891955744-b9a39d0f4b38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60' )"
+                  >Henkilövahingot</a
+                >
+              </li>
+              <li class="list-group-item" id="enviromental-list">
+                <a
+                  id="enviromental-click"
+                  style="color: black"
+                  href="#enviromental"
+                  onclick="enviromentalClick(this,'#2d343c','white', 'Luonnonmullistukset', 'https://images.unsplash.com/photo-1601928653712-120cfdc00398?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60')"
+                  >Luonnonmullistukset</a
+                >
+              </li>
+              <li class="list-group-item" id="translation-list">
+                <a
+                  id="translation-click"
+                  style="color: black"
+                  href="#translation"
+                  onclick="translationClick(this,'#2d343c','white', 'Kääntövirheet', 'https://images.unsplash.com/photo-1505883776-dae17d87b915?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60')"
+                  >Kääntövirheet</a
+                >
+              </li>
+              <li class="list-group-item" id="breakings-list">
+                <a
+                  id="breakings-click"
+                  style="color: black"
+                  href="#breakings"
+                  onclick="breakingsClick(this,'#2d343c','white', 'Murrot', 'https://images.unsplash.com/photo-1434139240289-56c519f77cb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')"
+                  >Murrot</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div>
+              <!-- ARTICLE TITLE -->
+              <p id="article-title" class="h1" onclick="clickMe()">Tulipalot</p>
+            </div>
+            <div
+              class="px-2 pt-2 d-flex justify-content-between border"
+              style="background-color: #f5f5f5"
+            >
+              <div>
+                <p>Makke <i>"Jekke"</i>Peippaaja | 7.2.2020</p>
+              </div>
+              <div class="d-flex">
+                <div>
+                  <i class="bx bxs-like">102</i>
+                </div>
+                <div>
+                  <i class="bx bxs-chat">7</i>
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <div class="d-flex">
+                <div class="mb-3 me-3">
+                  <!-- ARTICLE IMAGE -->
+                  <img
+                    id="article-img"
+                    src="https://images.unsplash.com/photo-1434139240289-56c519f77cb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    alt="img"
+                    style="width: 300px"
+                  />
+                </div>
+                <div>
+                  <p id="paragraph-1">
+            "This School management system software is used to manage information regarding students,office staff, Librarian,Account
+            officer, administrators and other school personnel use this platform to communicate and perform tasks.School management
+            system software assists the school in keeping all information related to the different departments of school in one
+            place. The software system provides users with a log in credentials for accessing the files. The system is designed to
+            automatically organize information as its input into the system.";
+                  </p>
+                </div>
+              </div>
+              <div>
+                <p id="paragraph-2">
+                    "thisthis software is Designed keeping in view the basic requirement of particular school.This software Provides a
+                    secure database structure with Login authenticated system that organizes stores and retrieves real time information.This
+                    software cover several modules Like software is Designed keeping in view the basic requirement of particular school.This
+                    software Provides a secure database structure with Login authenticated system that organizes stores and retrieves real
+                    time information.This software cover several modules Like";
+                </p>
+              </div>
+              <div class="my-2 mx-auto" style="width: fit-content">
+                <div>
+                  <hr class="w-25 mx-auto" />
+                  <i class="h5" id="qoute"
+                    >Veljesten nimet vanhimmasta nuorimpaan ovat:<br />Juhani,
+                    Tuomas, Aapo, Simeoni, Timo, Lauri ja Eero.</i
+                  >
+                  <hr class="w-25 mx-auto" />
+                </div>
+              </div>
+              <div>
+                <p id="paragraph-3">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Beatae voluptatem placeat asperiores mollitia perferendis
+                  accusamus iure adipisci, reiciendis recusandae velit sint
+                  possimus,<strong
+                    >eos cum aliquid. Nulla deleniti eum fuga voluptas</strong
+                  >
+"Its have multiple views for three different-different users :Manual Users Control All the users will be control by
+admin …admin can give all rights to other users manually. Its have multiple views for three different-different users
+:Manual Users Control All the users will be control by admin …admin can give all rights to other users manually. Its
+have multiple views for three different-different users :Manual Users Control All the users will be control by admin
+…admin can give all rights to other users manually. Its have multiple views for three different-different users :Manual
+Users Control All the users will be control by admin …admin can give all rights to other users manually. Its have
+multiple views for three different-different users :Manual Users Control All the users will be control by admin …admin
+can give all rights to other users manually. Its have multiple views for three different-different users :Manual Users
+Control All the users will be control by admin …admin can give all rights to other users manually. Its have multiple
+views for three different-different users :Manual Users Control All the users will be control by admin …admin can give
+all rights to other users manually. Its have multiple views for three different-different users :Manual Users Control
+All the users will be control by admin …admin can give all rights to other users manually. Its have multiple views for
+three different-different users :Manual Users Control All the users will be control by admin …admin can give all rights
+to other users manually. Its have multiple views for three different-different users :Manual Users Control All the users
+will be control by admin …admin can give all rights to other users manually. Its have multiple views for three
+different-different users :Manual Users Control All the users will be control by admin …admin can give all rights to
+other users manually. "
+                </p>
+              </div>
+              <div>
+                <p id="paragraph-4">
+        "Its have multiple views for three different-different users :Manual Users Control All the users will be control by
+        admin …admin can give all rights to other users manually. Its have multiple views for three different-different users
+        :Manual Users Control All the users will be control by admin …admin can give all rights to other users manually. Its
+        have multiple views for three different-different users :Manual Users Control All the users will be control by admin
+        …admin can give all rights to other users manually. Its have multiple views for three different-different users :Manual
+        Users Control All the users will be control by admin …admin can give all rights to other users manually. Its have
+        multiple views for three different-different users :Manual Users Control All the users will be control by admin …admin
+        can give all rights to other users manually. Its have multiple views for three different-different users :Manual Users
+        Control All the users will be control by admin …admin can give all rights to other users manually. Its have multiple
+        views for three different-different users :Manual Users Control All the users will be control by admin …admin can give
+        all rights to other users manually. Its have multiple views for three different-different users :Manual Users Control
+        All the users will be control by admin …admin can give all rights to other users manually. Its have multiple views for
+        three different-different users :Manual Users Control All the users will be control by admin …admin can give all rights
+        to other users manually. Its have multiple views for three different-different users :Manual Users Control All the users
+        will be control by admin …admin can give all rights to other users manually. Its have multiple views for three
+        different-different users :Manual Users Control All the users will be control by admin …admin can give all rights to
+        other users manually. "
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="ms-3" style="width: max-content">
+          <ul class="list-group">
+            <li class="list-group-item h5">AJASSA</li>
+            <li class="list-group-item">
+              <a class="text-dark" href="#"
+                ><i class="bx bx-desktop"></i> Oma työpöytä</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a class="text-dark" href="#"
+                ><i class="bx bxs-calendar-event"></i> Uutiset</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a class="text-dark" href="#"
+                ><i class="bx bxs-bell"></i>Ilmoitukset
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a class="text-dark" href="#">
+                <i class="bx bxs-calendar-event"></i>Kalenteri</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a class="text-dark" href="#"
+                ><i class="bx bxs-group"></i> Ryhmätyötila</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a class="text-dark" href="#"
+                ><i class="bx bxs-chat"></i> Keskustelu</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a class="text-dark" href="#"
+                ><i class="bx bxs-envelope"></i>Sähköposti</a
+              >
+            </li>
+            <li class="list-group-item list-heading h5">INFO</li>
+            <li class="list-group-item">
+              <a class="text-dark" href="#"
+                ><i class="bx bxs-group"></i> Henkilöstö</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a class="text-dark" href="#"
+                ><i class="bx bxs-graduation"></i>Koulutukset</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a class="text-dark" href="#"
+                ><i class="bx bxs-briefcase"></i> Asiakkaat ja vastuut</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a class="text-dark" href="#"
+                ><i class="bx bxs-time-five"></i> Työsuunnitelmat</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a class="text-dark" href="#"
+                ><i class="bx bxs-lock-alt"></i>Tietoturva</a
+              >
+            </li>
+            <li class="list-group-item bg-dark">
+              <a class="text-light" href="#"
+                ><i class="bx bxs-lock-alt"></i>Kirjasto</a
+              >
+            </li>
+            <li class="list-group-item">
+              <a class="text-dark" href="#"
+                ><i class="bx bxs-id-card"></i> Yhteystiedot</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer class="p-1 text-light bg-dark">
+      <div class="mx-auto" style="width: 90%">
+        <p>
+          &copy; Abako Oy 2020, Pyhajarvenkatu 5 B, 33200 Tampere, 010 229 3800
+        </p>
+      </div>
+    </footer>
+
+    <script src="index.js" ></script>
+
+  </body>
+</html>
